@@ -7,6 +7,7 @@ export const Navbar = () => {
 
     return (
         <Menu inverted attached style={{ padding: "1.5rem" }}>
+
             <Container>
                 <Menu.Item onClick={() => router.push("/")}>
                     <Image
@@ -19,12 +20,11 @@ export const Navbar = () => {
                 </Menu.Item>
                 <Menu.Item>
                     <h2>
-                        Nextjs PostgreSQL Typescript CRUD (REST API & Frontend)
+                        CRUD (REST API & Frontend) con Nextjs PostgreSQL Typescript
                     </h2>
                 </Menu.Item>
                 <Menu.Menu position="right">
                     <Menu.Item>
-
                         <Button onClick={() => router.push("/tasks/new")} primary>
                             Nueva Tarea
                         </Button>
