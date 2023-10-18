@@ -7,7 +7,7 @@ if (!conn) {//Si no existe la conexión, la crea
         password: "postgres",
         host: "localhost",
         port: 5432,
-        database: "tasksdb",
+        database: "tasks-ApiNextj",
     });
 }
 
