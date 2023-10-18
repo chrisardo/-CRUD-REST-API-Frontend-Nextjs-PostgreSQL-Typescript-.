@@ -1,4 +1,5 @@
 /*
+npm install semantic-ui-react semantic-ui-css
 para la bd a postgresql
 npm i pg
 npm install --save @types/pg

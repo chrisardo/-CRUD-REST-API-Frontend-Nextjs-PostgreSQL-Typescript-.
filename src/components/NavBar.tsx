@@ -7,7 +7,6 @@ export const Navbar = () => {
 
     return (
         <Menu inverted attached style={{ padding: "1.5rem" }}>
-
             <Container>
                 <Menu.Item onClick={() => router.push("/")}>
                     <Image

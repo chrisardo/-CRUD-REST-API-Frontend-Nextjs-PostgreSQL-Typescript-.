@@ -3,14 +3,14 @@ import { Card, Button, Icon, Confirm } from "semantic-ui-react";
 import { Task } from "src/interfaces/Tasks";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 
-interface Props {
+interface Props { //interface para definir los props que se le pasan al componente
     tasks: Task[];
 }
-const inititalState = {
+const inititalState = { //estado inicial de la tarea
     title: "",
     description: "",
 };
-type ChangeInputHandler = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+type ChangeInputHandler = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>; //definimos el tipo de dato que va a recibir el evento
 
 
 export const TaskList = ({ tasks = [] }: Props) => {
@@ -39,13 +39,13 @@ export const TaskList = ({ tasks = [] }: Props) => {
     };
     return (
         <Card.Group itemsPerRow={4}>
-            {tasks.map((task) => (
+            {tasks.map((task) => ( //recorremos el array de tareas, y por cada tarea se muestra un componente Card
                 <Card
-                    key={task.id}
+                    key={task.id} //el key es un identificador unico para cada tarea
                 >
                     <Card.Content>
                         <Card.Header>{task.title}</Card.Header>
-                        {task.created_on && (
+                        {task.created_on && ( //si existe la fecha de creacion de la tarea, se muestra
                             <Card.Meta>
                                 {new Date(task.created_on).toLocaleDateString()}
                             </Card.Meta>
